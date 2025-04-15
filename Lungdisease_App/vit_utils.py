@@ -13,7 +13,7 @@ def load_model(path, num_labels):
         num_labels=num_labels
     )
     model.classifier = torch.nn.Linear(model.classifier.in_features, num_labels)
-    model.load_state_dict(torch.load(path, map_location=device))
+    model.load_state_dict(torch.load(path, map_location=device,weights_only=True))
     model.to(device)
     model.eval()
     return model
