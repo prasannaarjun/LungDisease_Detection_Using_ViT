@@ -190,3 +190,5 @@ data_OG
 
 #models
 Model
+logs
+checkpoints/
